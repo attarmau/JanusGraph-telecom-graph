@@ -1,0 +1,9 @@
+version: '3'
+services:
+  janusgraph:
+    image: janusgraph/janusgraph:1.0
+    container_name: janusgraph
+    ports:
+      - "8182:8182"   # Gremlin Server
+    environment:
+      - JAVA_OPTIONS=-Xms512m -Xmx1g
